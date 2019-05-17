@@ -8,5 +8,9 @@ while True:
 	products.append(p)
 print (products)
 
-for pp in products:
-	print (pp[0], '的價格是', pp[1])
+
+with open ('products.csv', 'w', encoding= 'utf-8') as f:
+	f.write('商品,價格,\n')
+	for i in products:
+		f.write(i[0]+',' + i[1] + ','+ '\n' )
+
